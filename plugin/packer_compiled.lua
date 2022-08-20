@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["jedi-vim"] = {
+    loaded = true,
+    path = "/home/nadav/.local/share/nvim/site/pack/packer/start/jedi-vim",
+    url = "https://github.com/davidhalter/jedi-vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/nadav/.local/share/nvim/site/pack/packer/start/packer.nvim",
