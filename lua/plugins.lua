@@ -34,9 +34,10 @@ return packer.startup(function(use)
 	-- Let packer manage itself
 	use({ "wbthomason/packer.nvim" })
 
-    use {'nvim-lua/plenary.nvim'}
+    use 'nvim-lua/plenary.nvim'
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0'}
-    use {'davidhalter/jedi-vim'}
+    use 'davidhalter/jedi-vim'
+    use 'navarasu/onedark.nvim'
 
 	if PACKER_BOOTSTRAP then
 		packer.sync()
