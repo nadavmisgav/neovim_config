@@ -44,5 +44,3 @@ local lsp = require('lsp-zero').preset({
 lsp.nvim_workspace()
 
 lsp.setup()
-
-vim.api.nvim_create_autocmd("BufWritePre", { callback = vim.lsp.buf.formatting })
