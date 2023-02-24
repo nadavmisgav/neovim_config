@@ -1,3 +1,5 @@
+local api = vim.api
+
 local settings = {
 	-- Allow new buffer to be opened without saving current
 	hidden = true,
@@ -18,14 +20,12 @@ local settings = {
 	scrolloff = 3,
 	sidescrolloff = 5,
 	-- Enable mouse scroll
-	mouse = "a",
+	mouse = "ar",
 	-- Line Numbers
 	number = true,
 	relativenumber = true,
 	-- Don't automatically collapse markdown and latex
 	conceallevel = 0,
-	-- Set clipboard to system
-	clipboard = "unnamedplus",
 	-- Tab settings
 	expandtab = true,
 	tabstop = 4,
@@ -65,6 +65,7 @@ local settings = {
 	numberwidth = 4,
 }
 
+
 vim.opt.shortmess:append("c") -- don't show redundant messages from ins-completion-menu
 vim.opt.shortmess:append("I") -- don't show the default intro message
 vim.opt.whichwrap:append("<,>,[,],h,l")
@@ -72,3 +73,9 @@ vim.opt.whichwrap:append("<,>,[,],h,l")
 for k, v in pairs(settings) do
 	vim.opt[k] = v
 end
+
+
+-- nerdcommenter
+-- NERDCommenter
+-- add 1 space after comment delimiter
+api.nvim_set_var("NERDSpaceDelims", 1)
