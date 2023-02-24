@@ -34,13 +34,15 @@ require("nvim-tree").setup({
 })
 
 local lsp = require('lsp-zero').preset({
-  name = 'minimal',
-  set_lsp_keymaps = true,
-  manage_nvim_cmp = true,
-  suggest_lsp_servers = false,
+    name = 'minimal',
+    set_lsp_keymaps = true,
+    manage_nvim_cmp = true,
+    suggest_lsp_servers = false,
 })
 
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
 lsp.setup()
+
+vim.api.nvim_create_autocmd("BufWritePre", { callback = vim.lsp.buf.formatting })
