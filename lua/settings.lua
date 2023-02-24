@@ -11,7 +11,7 @@ local settings = {
 	swapfile = true,
 	dir = "/tmp",
 	-- Highlight search results
-	hlsearch = true,
+	hlsearch = false,
 	incsearch = true,
 	-- Case sensitive search unless uppercase is present
 	ignorecase = true,
